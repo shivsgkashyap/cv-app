@@ -3,12 +3,14 @@ import Buttons from "./Buttons";
 
 const Main = () => {
   return (
-    <div className="grid grid-cols-2 gap-12 max-w-7xl mx-auto mt-2 p-7 font-raleway">
-      <div className="bg-zinc-200 w-full p-5 rounded shadow-2xl">
+    <main className="grid grid-cols-2 gap-12 max-w-7xl mx-auto mt-2 p-7 font-raleway">
+      <section className="bg-zinc-100 w-full p-5 rounded shadow-2xl">
         <CVForm />
-      </div>
-      <div className="bg-zinc-200 w-full p-5 rounded shadow-xl">Main</div>
-    </div>
+      </section>
+      <section className="bg-zinc-100 w-full p-5 rounded shadow-xl">
+        Main
+      </section>
+    </main>
   );
 };
 
