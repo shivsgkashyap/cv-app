@@ -1,22 +1,15 @@
-import EditSection from "./EditSection";
-import Button from "./Button";
-
-const personalInfo = [];
-const experience = [];
-const education = [];
+import CVForm from "./CVForm";
 
 const Main = () => {
   return (
-    <div className="grid grid-cols-2 max-w-7xl mx-auto mt-2 p-7 font-raleway">
-      <div className="bg-yellow-200 w-full p-5">
-        <EditSection />
-        <EditSection />
-        <EditSection />
+    <div className="grid grid-cols-2 gap-12 max-w-7xl mx-auto mt-2 p-7 font-raleway">
+      <div className="bg-neutral-200 w-full p-5 rounded">
+        <CVForm />
         <Button />
         <Button />
         <Button />
       </div>
-      <div className="bg-yellow-400 w-full p-5">Main</div>
+      <div className="bg-yellow-400 w-full p-5 rounded">Main</div>
     </div>
   );
 };
