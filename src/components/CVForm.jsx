@@ -134,7 +134,7 @@ const CVForm = () => {
   ];
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-zinc-100 w-full p-5 rounded shadow-2xl">
       <section className="flex flex-col gap-2">
         {sectionOne.map((cvSection) => (
           <Sections cvSection={cvSection} />
