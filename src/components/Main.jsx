@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CVExample from "./CVExample";
+import CVExample from "./CVPreview/CVExample";
 import CVForm from "./CVForm";
 import emptyCV from "./Utils/emptyCV";
 import exampleCV from "./Utils/exampleCV";
