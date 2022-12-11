@@ -51,6 +51,32 @@ const Main = () => {
     });
   };
 
+  const handleAddExperience = () => {
+    setCv((prevState) => ({
+      ...prevState,
+      experience: [
+        ...prevState.experience,
+        {
+          id: uuidv4(),
+          position: "",
+          company: "",
+          city: "",
+          from: "",
+          to: "",
+        },
+      ],
+    }));
+  };
+
+  const handleDeleteExperience = (id) => {
+    setCv((prevState) => {
+      const newExperience = prevState.experience.filter(
+        (experienceItem) => experienceItem.id !== id
+      );
+      return { ...prevState, experience: [...newExperience] };
+    });
+  };
+
   const handleLoadExample = () => {
     setCv(exampleCV);
   };
