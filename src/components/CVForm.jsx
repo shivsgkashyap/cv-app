@@ -1,7 +1,7 @@
 import Sections from "./Sections";
 import Buttons from "./Buttons";
 
-const CVForm = () => {
+const CVForm = ({ handlePersonalChange, handleExperienceChange }) => {
   const sectionOne = [
     { value: "Personal Information", type: "title" },
     {
@@ -40,7 +40,7 @@ const CVForm = () => {
       placeHolder: "Email",
     },
     {
-      name: "desc",
+      name: "description",
       type: "textBox",
       placeHolder: "Description",
     },
@@ -137,13 +137,16 @@ const CVForm = () => {
     <div className="flex flex-col bg-zinc-100 w-full p-5 rounded shadow-2xl">
       <section className="flex flex-col gap-2">
         {sectionOne.map((cvSection) => (
-          <Sections cvSection={cvSection} />
+          <Sections cvSection={cvSection} handleChange={handlePersonalChange} />
         ))}
       </section>
 
       <section className="flex flex-col gap-2 mt-7">
         {sectionTwo.map((cvSection) => (
-          <Sections cvSection={cvSection} />
+          <Sections
+            cvSection={cvSection}
+            handleChange={handleExperienceChange}
+          />
         ))}
       </section>
 
