@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import CVExample from "./CVPreview/CVExample";
 import CVForm from "./CVForm";
 import emptyCV from "./Utils/emptyCV";
@@ -10,6 +11,11 @@ const Main = () => {
   const handlePersonalChange = (e) => {
     const { name, value, type } = e.target;
 
+    if (type === "file") {
+      handleChangeFile(e);
+      return;
+    }
+
     setCV((cv) => ({
       ...cv,
       personalInfo: {
@@ -17,6 +23,24 @@ const Main = () => {
         [name]: value,
       },
     }));
+  };
+
+  const handleChangeFile = (e) => {
+    const { name } = e.target;
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      setCv((prevState) => ({
+        ...prevState,
+        personalInfo: {
+          ...prevState.personalInfo,
+          [name]: reader.result,
+        },
+      }));
+    };
+    reader.readAsDataURL(file);
   };
 
   const handleExperienceChange = (e, id) => {
