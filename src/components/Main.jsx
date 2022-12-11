@@ -77,6 +77,33 @@ const Main = () => {
     });
   };
 
+  const handleAddEducation = () => {
+    setCv((prevState) => ({
+      ...prevState,
+      education: [
+        ...prevState.education,
+        {
+          id: uuidv4(),
+          universityName: "",
+          city: "",
+          degree: "",
+          subject: "",
+          from: "",
+          to: "",
+        },
+      ],
+    }));
+  };
+
+  const handleDeleteEducation = (id) => {
+    setCv((prevState) => {
+      const newEducation = prevState.education.filter(
+        (educationItem) => educationItem.id !== id
+      );
+      return { ...prevState, education: [...newEducation] };
+    });
+  };
+
   const handleLoadExample = () => {
     setCv(exampleCV);
   };
