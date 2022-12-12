@@ -7,7 +7,7 @@ import exampleCV from "./Utils/exampleCV";
 import emptyCV from "./Utils/emptyCV";
 
 const Main = () => {
-  const [cv, setCV] = useState(exampleCV);
+  const [cv, setCV] = useState(emptyCV);
 
   const handlePersonalChange = (e) => {
     const { name, value, type } = e.target;
@@ -139,7 +139,6 @@ const Main = () => {
 
   const componentRef = useRef();
 
-  // throws warning because react-to-print uses findDOMNode
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
   });
