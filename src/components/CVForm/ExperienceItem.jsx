@@ -1,7 +1,7 @@
 import Inputs from "../Utils/Inputs";
 import Buttons from "../Utils/Buttons";
 
-const ExperienceItem = ({ id, experienceItem, onChange, onDelete }) => {
+const ExperienceItem = ({ id, experienceItem, onChange, onDelete, onAdd }) => {
   return (
     <div className="flex flex-col gap-2">
       <Inputs
