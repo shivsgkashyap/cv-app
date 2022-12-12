@@ -8,13 +8,14 @@ const Education = ({ education, onChange, onAdd, onDelete, title }) => {
       educationItem={educationItem}
       onChange={onChange}
       onDelete={onDelete}
+      onAdd={onAdd}
     ></EducationItem>
   ));
 
   return (
     <section className="flex flex-col gap-2">
       <h3 className="text-lg font-semibold mb-1">{title}</h3>
-      {experienceItems}
+      {educationItems}
     </section>
   );
 };
