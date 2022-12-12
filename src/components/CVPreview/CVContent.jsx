@@ -15,8 +15,8 @@ const Content = ({ personalInfo, experience, education }) => {
         </h3>
         <div className="flex flex-col gap-4 mt-2">
           {experience.map((experience) => (
-            <div className="flex gap-7 p-1">
-              <div key={experience.id} className="w-1/3 font-semibold">
+            <div key={experience.id} className="flex gap-7 p-1">
+              <div className="w-1/3 font-semibold">
                 {experience.from} - {experience.to}
               </div>
               <div className="w-2/3">
@@ -39,8 +39,8 @@ const Content = ({ personalInfo, experience, education }) => {
         </h3>
         <div className="flex flex-col gap-4 mt-2">
           {education.map((education) => (
-            <div className="flex gap-7 p-1">
-              <div key={education.id} className="w-1/3 font-semibold">
+            <div key={education.id} className="flex gap-7 p-1">
+              <div className="w-1/3 font-semibold">
                 {education.from} - {education.to}
               </div>
               <div className="w-2/3">

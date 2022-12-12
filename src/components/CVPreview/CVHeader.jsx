@@ -1,4 +1,4 @@
-const CVHeader = ({ personalInfo: { firstName, lastName, title } }) => {
+const Header = ({ personalInfo: { firstName, lastName, title } }) => {
   return (
     <header className="p-5 bg-blue-800 text-zinc-100 col-span-2">
       <h1 className="text-5xl font-semibold">
@@ -9,4 +9,4 @@ const CVHeader = ({ personalInfo: { firstName, lastName, title } }) => {
   );
 };
 
-export default CVHeader;
+export default Header;
