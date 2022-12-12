@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useReactToPrint } from "react-to-print";
-import CVForm from "./CVform/CVForm";
+import CVForm from "./CVForm/CVForm";
 import CVExample from "./CVPreview/CVExample";
 import exampleCV from "./Utils/exampleCV";
 import emptyCV from "./Utils/emptyCV";
@@ -33,7 +33,7 @@ const Main = () => {
 
     const reader = new FileReader();
     reader.onload = () => {
-      setCv((prevState) => ({
+      setCV((prevState) => ({
         ...prevState,
         personalInfo: {
           ...prevState.personalInfo,
@@ -65,7 +65,7 @@ const Main = () => {
   const handleEducationChange = (e, id) => {
     const { name, value } = e.target;
 
-    setCv((cv) => {
+    setCV((cv) => {
       const newEducation = cv.education.map((educationItem) => {
         if (educationItem.id === id) {
           return { ...educationItem, [name]: value };
@@ -77,7 +77,7 @@ const Main = () => {
   };
 
   const handleAddExperience = () => {
-    setCv((prevState) => ({
+    setCV((prevState) => ({
       ...prevState,
       experience: [
         ...prevState.experience,
@@ -94,7 +94,7 @@ const Main = () => {
   };
 
   const handleDeleteExperience = (id) => {
-    setCv((prevState) => {
+    setCV((prevState) => {
       const newExperience = prevState.experience.filter(
         (experienceItem) => experienceItem.id !== id
       );
@@ -103,7 +103,7 @@ const Main = () => {
   };
 
   const handleAddEducation = () => {
-    setCv((prevState) => ({
+    setCV((prevState) => ({
       ...prevState,
       education: [
         ...prevState.education,
@@ -121,7 +121,7 @@ const Main = () => {
   };
 
   const handleDeleteEducation = (id) => {
-    setCv((prevState) => {
+    setCV((prevState) => {
       const newEducation = prevState.education.filter(
         (educationItem) => educationItem.id !== id
       );
@@ -130,11 +130,11 @@ const Main = () => {
   };
 
   const handleLoadExample = () => {
-    setCv(exampleCV);
+    setCV(exampleCV);
   };
 
   const handleReset = () => {
-    setCv(emptyCV);
+    setCV(emptyCV);
   };
 
   const componentRef = useRef();
@@ -148,18 +148,18 @@ const Main = () => {
     <main className="grid grid-cols-2 gap-12 max-w-7xl mx-auto mt-2 p-7 font-raleway">
       <CVForm
         cv={cv}
-        onChangePersonal={handlePersonalChange}
-        onChangeExperience={handleExperienceChange}
+        onPersonalChange={handlePersonalChange}
+        onExperienceChange={handleExperienceChange}
         onAddExperience={handleAddExperience}
         onDeleteExperience={handleDeleteExperience}
-        onChangeEducation={handleEducationChange}
+        onEducationChange={handleEducationChange}
         onAddEducation={handleAddEducation}
         onDeleteEducation={handleDeleteEducation}
         onPrint={handlePrint}
         onLoadExample={handleLoadExample}
         onReset={handleReset}
       />
-      <CVExample cv={cv} />
+      <CVExample cv={cv} ref={componentRef} />
     </main>
   );
 };
