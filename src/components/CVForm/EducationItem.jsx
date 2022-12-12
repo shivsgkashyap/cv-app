@@ -1,7 +1,7 @@
 import Inputs from "../Utils/Inputs";
 import Buttons from "../Utils/Buttons";
 
-const EducationItem = ({ id, educationItem, onChange, onDelete }) => {
+const EducationItem = ({ id, educationItem, onChange, onDelete, onAdd }) => {
   return (
     <>
       <Inputs
