@@ -8,6 +8,7 @@ const Experience = ({ experience, onChange, onAdd, onDelete, title }) => {
       experienceItem={experienceItem}
       onChange={onChange}
       onDelete={onDelete}
+      onAdd={onAdd}
     />
   ));
 
