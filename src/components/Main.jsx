@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import CVExample from "./CVPreview/CVExample";
-import CVForm from "./CVForm";
+import CVForm from "./CVForm/CVForm";
 import emptyCV from "./Utils/emptyCV";
 import exampleCV from "./Utils/exampleCV";
 

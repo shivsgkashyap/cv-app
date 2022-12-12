@@ -1,5 +1,5 @@
-import Sections from "./Sections";
-import Buttons from "./Buttons";
+import Sections from "../Utils/Sections";
+import Buttons from "../Utils/Buttons";
 
 const CVForm = ({ handlePersonalChange, handleExperienceChange }) => {
   const sectionOne = [
