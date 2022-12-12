@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useReactToPrint } from "react-to-print";
-import CVForm from "./CVForm";
-import CVExample from "./CVPreview";
+import CVForm from "./CVform/CVForm";
+import CVExample from "./CVPreview/CVExample";
 import exampleCV from "./Utils/exampleCV";
 import emptyCV from "./Utils/emptyCV";
 
