@@ -1,4 +1,3 @@
-import React from "react";
 import Personal from "./Personal";
 import Education from "./Education";
 import Experience from "./Experience";
@@ -62,23 +61,4 @@ const CVForm = ({
   );
 };
 
-//   <section className="flex flex-col gap-2">
-//     {sectionOne.map((cvSection) => (
-//       <Sections cvSection={cvSection} handleChange={handlePersonalChange} />
-//     ))}
-//   </section>
-
-//   <section className="flex flex-col gap-2 mt-7">
-//     {sectionTwo.map((cvSection) => (
-//       <Sections
-//         cvSection={cvSection}
-//         handleChange={handleExperienceChange}
-//       />
-//     ))}
-//   </section>
-
-//   <section className="flex flex-col gap-2 mt-7">
-//     {sectionThree.map((cvSection) => (
-//       <Sections cvSection={cvSection} />
-//     ))}
-//   </section>
+export default CVForm;
