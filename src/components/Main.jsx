@@ -1,9 +1,10 @@
-import { useState } from "react";
+import React, { useState, useRef } from "react";
 import { v4 as uuidv4 } from "uuid";
-import CVExample from "./CVPreview/CVExample";
-import CVForm from "./CVForm/CVForm";
-import emptyCV from "./Utils/emptyCV";
+import { useReactToPrint } from "react-to-print";
+import CVForm from "./CVForm";
+import CVExample from "./CVPreview";
 import exampleCV from "./Utils/exampleCV";
+import emptyCV from "./Utils/emptyCV";
 
 const Main = () => {
   const [cv, setCV] = useState(exampleCV);
@@ -136,12 +137,27 @@ const Main = () => {
     setCv(emptyCV);
   };
 
+  const componentRef = useRef();
+
+  // throws warning because react-to-print uses findDOMNode
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
+
   return (
     <main className="grid grid-cols-2 gap-12 max-w-7xl mx-auto mt-2 p-7 font-raleway">
       <CVForm
         cv={cv}
-        handlePersonalChange={handlePersonalChange}
-        handleExperienceChange={handleExperienceChange}
+        onChangePersonal={handlePersonalChange}
+        onChangeExperience={handleExperienceChange}
+        onAddExperience={handleAddExperience}
+        onDeleteExperience={handleDeleteExperience}
+        onChangeEducation={handleEducationChange}
+        onAddEducation={handleAddEducation}
+        onDeleteEducation={handleDeleteEducation}
+        onPrint={handlePrint}
+        onLoadExample={handleLoadExample}
+        onReset={handleReset}
       />
       <CVExample cv={cv} />
     </main>
