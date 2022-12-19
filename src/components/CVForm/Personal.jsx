@@ -23,7 +23,7 @@ const Personal = ({ personalInfo, onChange, title }) => {
           onChange={(e) => onChange(e)}
           type="text"
           name="title"
-          placeholder="Title"
+          placeholder="Job title"
           value={personalInfo.title}
         />
         <Inputs

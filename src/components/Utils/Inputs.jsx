@@ -23,7 +23,7 @@ const Inputs = ({ type, name, placeholder, onChange, value, label }) => {
     );
   } else if (type === "photo") {
     return (
-      <label className="p-2 rounded border border-transparent bg-white active:border-gray-400 outline-none">
+      <label className="p-1 rounded border border-transparent bg-white active:border-gray-400 outline-none">
         <input type="file" onChange={onChange} name={name} className="hidden" />
         {label}
       </label>

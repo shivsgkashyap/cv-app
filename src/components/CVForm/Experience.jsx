@@ -13,7 +13,7 @@ const Experience = ({ experience, onChange, onAdd, onDelete, title }) => {
   ));
 
   return (
-    <section className="flex flex-col gap-2">
+    <section className="flex flex-col gap-2 mt-4">
       <h3 className="text-lg font-semibold mb-1">{title}</h3>
       {experienceItems}
     </section>
