@@ -11,4 +11,4 @@ A React app which allows users to create their own resume with a live preview. T
 - [tailwindcss](https://tailwindcss.com/)
 - [react-to-print](https://www.npmjs.com/package/react-to-print)
 - [uuid](https://www.npmjs.com/package/uuid)
-- [Vite] (https://vitejs.dev/)
+- [Vite](https://vitejs.dev/)
