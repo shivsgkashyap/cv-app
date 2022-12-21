@@ -144,7 +144,7 @@ const Main = () => {
   });
 
   return (
-    <main className="grid grid-cols-1 grid-rows-2 gap-12 max-w-7xl mx-auto mt-2 p-7 font-raleway lg:grid-cols-2 lg:grid-rows-none">
+    <main className="grid grid-cols-1 gap-20 max-w-[90rem] mx-auto mt-2 p-7 font-raleway lg:grid-cols-2">
       <CVForm
         cv={cv}
         onPersonalChange={handlePersonalChange}

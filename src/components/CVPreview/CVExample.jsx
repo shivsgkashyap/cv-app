@@ -10,7 +10,7 @@ class CVExample extends Component {
     const { cv } = this.props;
 
     return (
-      <div className="grid grid-cols-[2.5fr_1fr] grid-rows-[1fr_8.5fr] sticky top-2.5 self-start bg-zinc-100 w-full shadow-2xl">
+      <div className="bg-zinc-100 shadow-2xl flex flex-col lg:grid lg:grid-cols-[2.5fr_1fr] lg:grid-rows-[1fr_8.5fr] lg:sticky lg:top-2.5 lg:self-start lg:w-full">
         <Header personalInfo={cv.personalInfo} />
         <Content
           personalInfo={cv.personalInfo}
