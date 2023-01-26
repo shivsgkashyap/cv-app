@@ -1,6 +1,6 @@
 const Sidebar = ({ personalInfo: { photo, address, phoneNumber, email } }) => {
   return (
-    <div className="p-5 bg-zinc-100">
+    <div className="flex flex-col p-5 bg-zinc-100">
       <img className="mb-8" src={photo} />
       <section className="flex flex-col gap-2">
         <h3 className="text-lg font-semibold text-blue-800 border-b">

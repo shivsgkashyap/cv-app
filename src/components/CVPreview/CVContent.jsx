@@ -35,7 +35,7 @@ const Content = ({ personalInfo, experience, education }) => {
       </section>
       <section>
         <h3 className="text-lg font-semibold text-blue-800 border-b">
-          Experience
+          Education
         </h3>
         <div className="flex flex-col gap-4 mt-2">
           {education.map((education) => (
